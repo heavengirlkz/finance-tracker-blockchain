@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/4.3.2/web3.min.js"></script>
+    <script defer src="web3.js"></script>
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <h1>Finance Tracker</h1>
+    
+    <div class="form">
+        <input id="description" type="text" placeholder="Описание">
+        <input id="amount" type="number" placeholder="Сумма">
+        <button onclick="addTransaction()">Добавить</button>
+    </div>
+
+    <h2>Транзакции</h2>
+    <ul id="transactions"></ul>
+
+</body>
+</html>
