@@ -20,4 +20,10 @@ const getTransactions = async () => {
     });
 };
 
+document.getElementById("show-transactions").addEventListener("click", function() {
+    let transactionsList = document.getElementById("transactions");
+    transactionsList.style.display = transactionsList.style.display === "none" ? "block" : "none";
+});
+
+
 window.addEventListener("load", initWeb3);
