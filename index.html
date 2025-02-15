@@ -17,6 +17,9 @@
         <input id="amount" type="number" placeholder="Сумма">
         <button onclick="addTransaction()">Добавить</button>
     </div>
+<button onclick="connectMetaMask()">Подключить MetaMask</button>
+<p id="wallet">Кошелек: не подключен</p>
+<button onclick="getTransactions()">Загрузить транзакции</button>
 
     <h2>Транзакции</h2>
     <ul id="transactions"></ul>
