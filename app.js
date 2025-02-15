@@ -25,5 +25,22 @@ document.getElementById("show-transactions").addEventListener("click", function(
     transactionsList.style.display = transactionsList.style.display === "none" ? "block" : "none";
 });
 
+let userAccount = null;
+
+// Проверяем, есть ли MetaMask
+async function connectMetaMask() {
+    if (window.ethereum) {
+        try {
+            const accounts = await ethereum.request({ method: "eth_requestAccounts" });
+            userAccount = accounts[0];
+            console.log("Подключён аккаунт:", userAccount);
+            document.getElementById("wallet").innerText = "Кошелек: " + userAccount;
+        } catch (error) {
+            console.error("Ошибка подключения:", error);
+        }
+    } else {
+        alert("Установите MetaMask!");
+    }
+}
 
 window.addEventListener("load", initWeb3);
